@@ -1,7 +1,6 @@
 // main.js
-
 document.addEventListener("DOMContentLoaded", () => {
-  // زر الرجوع للأعلى
+  /** زر الرجوع للأعلى **/
   const toTopBtn = document.createElement("button");
   toTopBtn.textContent = "⬆️";
   Object.assign(toTopBtn.style, {
@@ -16,8 +15,8 @@ document.addEventListener("DOMContentLoaded", () => {
     border: "none",
     display: "none",
     cursor: "pointer",
-    zIndex: 1000,
-    transition: "0.3s ease"
+    zIndex: "1000",
+    transition: "opacity 0.3s ease"
   });
   document.body.appendChild(toTopBtn);
 
@@ -29,38 +28,38 @@ document.addEventListener("DOMContentLoaded", () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
 
-  // فتح المودال
-  window.openModal = function(id) {
+  /** فتح المودال **/
+  window.openModal = (id) => {
     const modal = document.getElementById(id);
     if (modal) modal.style.display = "flex";
   };
 
-  // إغلاق المودال
-  window.closeModal = function(id) {
+  /** إغلاق المودال **/
+  window.closeModal = (id) => {
     const modal = document.getElementById(id);
     if (modal) modal.style.display = "none";
   };
 
-  // إغلاق عند الضغط خارج المودال
+  /** إغلاق عند الضغط خارج المودال **/
   window.addEventListener("click", (e) => {
-    document.querySelectorAll(".modal").forEach(modal => {
-      if (e.target === modal) {
-        modal.style.display = "none";
-      }
-    });
+    if (e.target.classList.contains("modal")) {
+      e.target.style.display = "none";
+    }
   });
 
-  // الأسئلة الشائعة
-  document.querySelectorAll(".faq-question").forEach(q => {
-    q.addEventListener("click", () => {
-      const answer = q.nextElementSibling;
+  /** الأسئلة الشائعة **/
+  document.querySelectorAll(".faq-question").forEach((question) => {
+    question.addEventListener("click", () => {
+      const answer = question.nextElementSibling;
       const isOpen = answer.classList.contains("show");
 
-      document.querySelectorAll(".faq-question").forEach(btn => btn.classList.remove("active"));
-      document.querySelectorAll(".faq-answer").forEach(a => a.classList.remove("show"));
+      // إغلاق الكل
+      document.querySelectorAll(".faq-question").forEach((btn) => btn.classList.remove("active"));
+      document.querySelectorAll(".faq-answer").forEach((ans) => ans.classList.remove("show"));
 
+      // فتح السؤال الحالي إذا ما كان مفتوح
       if (!isOpen) {
-        q.classList.add("active");
+        question.classList.add("active");
         answer.classList.add("show");
       }
     });
