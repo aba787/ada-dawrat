@@ -13,8 +13,8 @@ html {
 
 body {
   font-family: "Tajawal", sans-serif;
-  background: #ffffff;
-  color: #333;
+  background: #2A2A2A;
+  color: #ffffff;
   line-height: 1.6;
   direction: rtl;
 }
@@ -27,14 +27,14 @@ body {
 
 /* Navigation */
 .navbar {
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(42, 42, 42, 0.95);
   backdrop-filter: blur(10px);
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1000;
   padding: 1rem 0;
-  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
 }
 
 .nav-container {
@@ -47,7 +47,7 @@ body {
 }
 
 .nav-logo h2 {
-  color: #6366f1;
+  color: #766E99;
   font-weight: 700;
   font-size: 1.8rem;
 }
@@ -59,18 +59,18 @@ body {
 
 .nav-links a {
   text-decoration: none;
-  color: #333;
+  color: #ffffff;
   font-weight: 500;
   transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-  color: #6366f1;
+  color: #766E99;
 }
 
 /* Hero Section */
 .hero-section {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #766E99 0%, #9B9B9B 100%);
   padding: 120px 0 80px;
   text-align: center;
   color: white;
@@ -108,7 +108,7 @@ body {
 .cta-button {
   display: inline-block;
   background: #ffffff;
-  color: #667eea;
+  color: #766E99;
   padding: 15px 30px;
   border-radius: 50px;
   text-decoration: none;
@@ -136,13 +136,13 @@ body {
 /* Features Section */
 .features {
   padding: 80px 0;
-  background: #f8fafc;
+  background: #9B9B9B;
 }
 
 .features h2 {
   text-align: center;
   font-size: 2.5rem;
-  color: #333;
+  color: #2A2A2A;
   margin-bottom: 3rem;
   font-weight: 700;
 }
@@ -173,33 +173,33 @@ body {
 }
 
 .feature-card h3 {
-  color: #333;
+  color: #766E99;
   margin-bottom: 1rem;
   font-size: 1.3rem;
 }
 
 .feature-card p {
-  color: #666;
+  color: #2A2A2A;
   line-height: 1.6;
 }
 
 /* Courses Section */
 .courses-section {
   padding: 80px 0;
-  background: white;
+  background: #2A2A2A;
 }
 
 .courses-section h2 {
   text-align: center;
   font-size: 2.5rem;
-  color: #333;
+  color: #766E99;
   margin-bottom: 1rem;
   font-weight: 700;
 }
 
 .section-subtitle {
   text-align: center;
-  color: #666;
+  color: #9B9B9B;
   font-size: 1.1rem;
   margin-bottom: 3rem;
 }
@@ -259,14 +259,14 @@ body {
 }
 
 .course-content h3 {
-  color: #333;
+  color: #766E99;
   font-size: 1.3rem;
   margin-bottom: 0.5rem;
   font-weight: 600;
 }
 
 .course-content > p {
-  color: #666;
+  color: #2A2A2A;
   margin-bottom: 1rem;
   line-height: 1.5;
 }
@@ -357,7 +357,7 @@ body {
 
 .register-btn {
   display: inline-block;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #766E99 0%, #9B9B9B 100%);
   color: white;
   padding: 12px 30px;
   border-radius: 25px;
@@ -388,13 +388,13 @@ body {
 /* FAQ Section */
 .faq-section {
   padding: 80px 0;
-  background: #f8fafc;
+  background: #9B9B9B;
 }
 
 .faq-section h2 {
   text-align: center;
   font-size: 2.5rem;
-  color: #333;
+  color: #2A2A2A;
   margin-bottom: 1rem;
   font-weight: 700;
 }
@@ -416,7 +416,7 @@ body {
   width: 100%;
   text-align: right;
   background: white;
-  color: #333;
+  color: #2A2A2A;
   padding: 1.5rem 2rem;
   font-size: 1.1rem;
   font-weight: 600;
@@ -433,11 +433,11 @@ body {
   top: 50%;
   transform: translateY(-50%);
   transition: transform 0.3s ease;
-  color: #667eea;
+  color: #766E99;
 }
 
 .faq-question.active {
-  background: #667eea;
+  background: #766E99;
   color: white;
 }
 
@@ -450,9 +450,9 @@ body {
   max-height: 0;
   overflow: hidden;
   padding: 0 2rem;
-  background: #f8fafc;
+  background: #ffffff;
   transition: all 0.4s ease;
-  color: #666;
+  color: #2A2A2A;
   line-height: 1.6;
 }
 
@@ -464,7 +464,7 @@ body {
 /* Contact Section */
 .contact-section {
   padding: 60px 0;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #766E99 0%, #9B9B9B 100%);
   text-align: center;
   color: white;
 }
@@ -484,7 +484,7 @@ body {
 .contact-btn {
   display: inline-block;
   background: white;
-  color: #667eea;
+  color: #766E99;
   padding: 15px 30px;
   border-radius: 25px;
   text-decoration: none;
@@ -643,7 +643,7 @@ body {
   position: fixed;
   bottom: 20px;
   left: 20px;
-  background: #667eea;
+  background: #766E99;
   color: white;
   border: none;
   width: 50px;
@@ -653,10 +653,10 @@ body {
   display: none;
   z-index: 1000;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+  box-shadow: 0 4px 15px rgba(118, 110, 153, 0.3);
 }
 
 .back-to-top:hover {
-  background: #5a67d8;
+  background: #9B9B9B;
   transform: translateY(-2px);
 }
