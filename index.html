@@ -4,82 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>آدا | دوراتي</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
     <style>
-      body {
-        font-family: "Tajawal", sans-serif;
-        background: #f6f3fb;
-        margin: 0;
-        padding: 0;
-        direction: rtl;
-      }
-
-      .site-header {
-        background: linear-gradient(135deg, #5e4b8b, #4b3b69);
-        color: #fff;
-        padding: 80px 20px;
-        text-align: center;
-        position: relative;
-        overflow: hidden;
-      }
-
-      .site-header h1 {
-        font-size: 64px;
-        font-weight: 700;
-        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
-        margin-bottom: 10px;
-      }
-
-      .site-header p {
-        font-size: 22px;
-        font-weight: 400;
-        color: #f0e6ff;
-        text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.3);
-      }
-
-      .courses {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 20px;
-        padding: 40px;
-        max-width: 1200px;
-        margin: auto;
-      }
-
-      .course-card {
-        background: #d9c8f3;
-        border: 3px solid #4b3b69;
-        border-radius: 15px;
-        text-align: center;
-        padding: 20px;
-        box-shadow: 0 6px 12px rgba(75, 59, 105, 0.3);
-        cursor: pointer;
-        transition: 0.3s;
-      }
-
-      .course-card img {
-        width: 100%;
-        height: 150px;
-        border-radius: 10px;
-        margin-bottom: 15px;
-        object-fit: cover;
-      }
-
-      .course-card h3 {
-        font-size: 22px;
-        color: #4b3b69;
-      }
-
-      .course-card p {
-        font-size: 16px;
-        color: #333;
-      }
-
-      .course-card:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 12px 25px rgba(75, 59, 105, 0.4);
-      }
-
+      /* Existing CSS for modals and other elements that might not be covered by new classes */
       .modal {
         display: none;
         position: fixed;
@@ -137,23 +65,8 @@
         color: #4b3b69;
         cursor: pointer;
       }
-      .faq {
-        max-width: 800px;
-        margin: 60px auto;
-        padding: 30px;
-        background: #fff;
-        border-radius: 15px;
-        border: 2px solid #4b3b69;
-        box-shadow: 0 8px 20px rgba(75, 59, 105, 0.2);
-      }
 
-      .faq h2 {
-        text-align: center;
-        color: #4b3b69;
-        margin-bottom: 25px;
-        font-size: 28px;
-      }
-
+      /* Keep original FAQ styles if new ones don't cover them */
       .faq-item {
         margin-bottom: 15px;
         border-bottom: 1px solid #ddd;
@@ -211,171 +124,243 @@
     </style>
   </head>
   <body>
-    <header class="site-header">
-      <h1>آدا</h1>
-      <p>موقع الدورات</p>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <h2>آدا</h2>
+        </div>
+        <div class="nav-links">
+          <a href="#courses">الدورات</a>
+          <a href="#faq">الأسئلة الشائعة</a>
+          <a href="#contact">تواصل معنا</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section">
+      <div class="hero-content">
+        <h1>آدا</h1>
+        <p>منصة التعلم الرقمي الرائدة</p>
+        <p class="hero-subtitle">تعلم المهارات التقنية والإبداعية من خلال دورات شاملة ومتخصصة</p>
+        <a href="#courses" class="cta-button">ابدأ رحلتك التعليمية</a>
+      </div>
+      <div class="hero-decoration"></div>
     </header>
-    <section class="courses">
-      <div class="course-card" onclick="openModal('graphicCourse')">
-        <img
-          src="https://i.postimg.cc/yWqcRC1q/Untitled-design.png"
-          alt="تصميم جرافيك"
-        />
-        <h3>تصميم جرافيك</h3>
-        <p>دورة تصميم الجرافيك من الصفر للمحترفين</p>
-        <p>
-          السعر الأصلي:
-          <span style="text-decoration: line-through; color: gray"
-            >299 ريال</span
-          ><br />
-          السعر بعد الخصم:
-          <span style="color: red; font-weight: bold">189 ريال</span>
-        </p>
-      </div>
 
-      <div class="course-card" onclick="openModal('englishCourse')">
-        <img
-          src="https://i.postimg.cc/8cB9zxTC/Untitled-design.png"
-          alt="الإنجليزية للمبرمجين"
-        />
-        <h3>الإنجليزية للمبرمجين</h3>
-        <p>دورة الإنجليزية للمبرمجين</p>
-        <p>
-          السعر الأصلي:
-          <span style="text-decoration: line-through; color: gray"
-            >299 ريال</span
-          ><br />
-          السعر بعد الخصم:
-          <span style="color: red; font-weight: bold">189 ريال</span>
-        </p>
-      </div>
-
-      <div class="course-card" onclick="openModal('cyberCourse')">
-        <img
-          src="https://i.postimg.cc/xTbq629m/Untitled-design.png"
-          alt="الأمن السيبراني"
-        />
-        <h3>الأمن السيبراني</h3>
-        <p>دورة الأمن السيبراني من الصفر للاحتراف</p>
-        <p>
-          السعر الأصلي:
-          <span style="text-decoration: line-through; color: gray"
-            >299 ريال</span
-          ><br />
-          السعر بعد الخصم:
-          <span style="color: red; font-weight: bold">189 ريال</span>
-        </p>
-      </div>
-
-      <div class="course-card" onclick="openModal('networkCourse')">
-        <img
-          src="https://i.postimg.cc/02DjkgZR/Untitled-design.png"
-          alt="الشبكات"
-        />
-        <h3>الشبكات</h3>
-        <p>مفاهيم الشبكات وإدارتها.</p>
-        <p>
-          السعر الأصلي:
-          <span style="text-decoration: line-through; color: gray"
-            >299 ريال</span
-          ><br />
-          السعر بعد الخصم:
-          <span style="color: red; font-weight: bold">189 ريال</span>
-        </p>
-      </div>
-
-      <div class="course-card" onclick="openModal('jsCourse')">
-        <img
-          src="https://i.postimg.cc/HsxkCYDJ/Untitled-design.png"
-          alt="JavaScript متقدم"
-        />
-        <h3>JavaScript</h3>
-        <p>نعلم من الصفر.</p>
-        <p>
-          السعر الأصلي:
-          <span style="text-decoration: line-through; color: gray"
-            >299 ريال</span
-          ><br />
-          السعر بعد الخصم:
-          <span style="color: red; font-weight: bold">189 ريال</span>
-        </p>
-      </div>
-
-      <div class="course-card" onclick="openModal('canvaCourse')">
-        <img
-          src="https://i.postimg.cc/LXTj11cS/Untitled-design.png"
-          alt="تصميم باستخدام Canva"
-        />
-        <h3>تصميم باستخدام Canva</h3>
-        <p>تعلم إنشاء تصاميم احترافية باستخدام Canva بسهولة.</p>
-        <p>
-          السعر الأصلي:
-          <span style="text-decoration: line-through; color: gray"
-            >299 ريال</span
-          ><br />
-          السعر بعد الخصم:
-          <span style="color: red; font-weight: bold">189 ريال</span>
-        </p>
-      </div>
-
-      <div class="course-card" onclick="openModal('dataAnalysisCourse')">
-        <img
-          src="https://i.postimg.cc/JhvCH04T/Untitled-design.png"
-          alt="تحليل البيانات"
-        />
-        <h3>تحليل البيانات</h3>
-        <p>
-          تعلم استخدام Excel وPower BI لتحليل البيانات واتخاذ القرارات.
-        </p>
-        <p>
-          السعر الأصلي:
-          <span style="text-decoration: line-through; color: gray"
-            >299 ريال</span
-          ><br />
-          السعر بعد الخصم:
-          <span style="color: red; font-weight: bold">189 ريال</span>
-        </p>
-      </div>
-
-      <div class="course-card" onclick="openModal('pixelCourse')">
-        <img
-          src="https://i.postimg.cc/Gp5dPzzx/Untitled-design.png"
-          alt="طريقة الاستخدام من الصفر بيكسل"
-        />
-        <h3>بيكسل</h3>
-        <p>
-          كيفية تتبع وتحليل الحملات الإعلانية باستخدام Facebook Pixel.
-        </p>
-        <p>
-          السعر الأصلي:
-          <span style="text-decoration: line-through; color: gray"
-            >299 ريال</span
-          ><br />
-          السعر بعد الخصم:
-          <span style="color: red; font-weight: bold">189 ريال</span>
-        </p>
-      </div>
-
-      <div class="course-card" onclick="openModal('googleDataCourse')">
-        <img
-          src="https://i.postimg.cc/26WRQY1C/Untitled-design.png"
-          alt="Google Data Analytics"
-        />
-        <h3>تحليلات بيانات Google</h3>
-        <p>
-          شهادة معتمدة من Google لتحليل البيانات باستخدام أدوات احترافية.
-        </p>
-        <p>
-          السعر الأصلي:
-          <span style="text-decoration: line-through; color: gray"
-            >299 ريال</span
-          ><br />
-          السعر بعد الخصم:
-          <span style="color: red; font-weight: bold">189 ريال</span>
-        </p>
+    <!-- Features Section -->
+    <section class="features">
+      <div class="container">
+        <h2>لماذا تختار آدا؟</h2>
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">📚</div>
+            <h3>محتوى متخصص</h3>
+            <p>دورات مصممة بعناية من قبل خبراء في كل مجال</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🎓</div>
+            <h3>شهادات معتمدة</h3>
+            <p>احصل على شهادات معتمدة بعد إتمام كل دورة بنجاح</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">💬</div>
+            <h3>دعم مستمر</h3>
+            <p>فريق دعم متاح لمساعدتك في أي وقت</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">⏰</div>
+            <h3>تعلم في أي وقت</h3>
+            <p>مرونة في المواعيد تناسب جدولك الشخصي</p>
+          </div>
+        </div>
       </div>
     </section>
 
+    <!-- Courses Section -->
+    <section class="courses-section" id="courses">
+      <div class="container">
+        <h2>دوراتنا المتميزة</h2>
+        <p class="section-subtitle">اكتشف مجموعة واسعة من الدورات التي تناسب احتياجاتك</p>
+
+        <div class="courses-grid">
+          <div class="course-card" onclick="openModal('graphicCourse')">
+            <div class="course-image">
+              <img src="https://i.postimg.cc/yWqcRC1q/Untitled-design.png" alt="تصميم جرافيك" />
+              <div class="course-badge">الأكثر طلباً</div>
+            </div>
+            <div class="course-content">
+              <h3>تصميم جرافيك</h3>
+              <p>دورة تصميم الجرافيك من الصفر للمحترفين</p>
+              <div class="course-features">
+                <span>🎨 تطبيق عملي</span>
+                <span>📜 شهادة معتمدة</span>
+              </div>
+              <div class="course-pricing">
+                <span class="original-price">299 ريال</span>
+                <span class="current-price">189 ريال</span>
+                <span class="discount">خصم 37%</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="course-card" onclick="openModal('englishCourse')">
+            <div class="course-image">
+              <img src="https://i.postimg.cc/8cB9zxTC/Untitled-design.png" alt="الإنجليزية للمبرمجين" />
+            </div>
+            <div class="course-content">
+              <h3>الإنجليزية للمبرمجين</h3>
+              <p>دورة الإنجليزية للمبرمجين</p>
+              <div class="course-features">
+                <span>💻 مخصص للمبرمجين</span>
+                <span>🗣️ مهارات المحادثة</span>
+              </div>
+              <div class="course-pricing">
+                <span class="original-price">299 ريال</span>
+                <span class="current-price">189 ريال</span>
+                <span class="discount">خصم 37%</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="course-card" onclick="openModal('cyberCourse')">
+            <div class="course-image">
+              <img src="https://i.postimg.cc/xTbq629m/Untitled-design.png" alt="الأمن السيبراني" />
+            </div>
+            <div class="course-content">
+              <h3>الأمن السيبراني</h3>
+              <p>دورة الأمن السيبراني من الصفر للاحتراف</p>
+              <div class="course-features">
+                <span>🔒 حماية شاملة</span>
+                <span>🛡️ اختراق أخلاقي</span>
+              </div>
+              <div class="course-pricing">
+                <span class="original-price">299 ريال</span>
+                <span class="current-price">189 ريال</span>
+                <span class="discount">خصم 37%</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="course-card" onclick="openModal('networkCourse')">
+            <div class="course-image">
+              <img src="https://i.postimg.cc/02DjkgZR/Untitled-design.png" alt="الشبكات" />
+            </div>
+            <div class="course-content">
+              <h3>الشبكات</h3>
+              <p>مفاهيم الشبكات وإدارتها</p>
+              <div class="course-features">
+                <span>🌐 أساسيات الشبكات</span>
+                <span>⚙️ إدارة متقدمة</span>
+              </div>
+              <div class="course-pricing">
+                <span class="original-price">299 ريال</span>
+                <span class="current-price">189 ريال</span>
+                <span class="discount">خصم 37%</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="course-card" onclick="openModal('jsCourse')">
+            <div class="course-image">
+              <img src="https://i.postimg.cc/HsxkCYDJ/Untitled-design.png" alt="JavaScript" />
+            </div>
+            <div class="course-content">
+              <h3>JavaScript</h3>
+              <p>تعلم من الصفر</p>
+              <div class="course-features">
+                <span>⚡ تطوير ويب</span>
+                <span>🚀 مشاريع عملية</span>
+              </div>
+              <div class="course-pricing">
+                <span class="original-price">299 ريال</span>
+                <span class="current-price">189 ريال</span>
+                <span class="discount">خصم 37%</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="course-card" onclick="openModal('canvaCourse')">
+            <div class="course-image">
+              <img src="https://i.postimg.cc/LXTj11cS/Untitled-design.png" alt="تصميم باستخدام Canva" />
+            </div>
+            <div class="course-content">
+              <h3>تصميم باستخدام Canva</h3>
+              <p>تعلم إنشاء تصاميم احترافية بسهولة</p>
+              <div class="course-features">
+                <span>🎨 تصميم سهل</span>
+                <span>📱 سوشيال ميديا</span>
+              </div>
+              <div class="course-pricing">
+                <span class="original-price">299 ريال</span>
+                <span class="current-price">189 ريال</span>
+                <span class="discount">خصم 37%</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="course-card" onclick="openModal('dataAnalysisCourse')">
+            <div class="course-image">
+              <img src="https://i.postimg.cc/JhvCH04T/Untitled-design.png" alt="تحليل البيانات" />
+            </div>
+            <div class="course-content">
+              <h3>تحليل البيانات</h3>
+              <p>تعلم Excel وPower BI لتحليل البيانات</p>
+              <div class="course-features">
+                <span>📊 تحليل متقدم</span>
+                <span>💡 اتخاذ قرارات</span>
+              </div>
+              <div class="course-pricing">
+                <span class="original-price">299 ريال</span>
+                <span class="current-price">189 ريال</span>
+                <span class="discount">خصم 37%</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="course-card" onclick="openModal('pixelCourse')">
+            <div class="course-image">
+              <img src="https://i.postimg.cc/Gp5dPzzx/Untitled-design.png" alt="بيكسل" />
+            </div>
+            <div class="course-content">
+              <h3>بيكسل</h3>
+              <p>تتبع الحملات الإعلانية باستخدام Facebook Pixel</p>
+              <div class="course-features">
+                <span>📈 تتبع الحملات</span>
+                <span>🎯 استهداف دقيق</span>
+              </div>
+              <div class="course-pricing">
+                <span class="original-price">299 ريال</span>
+                <span class="current-price">189 ريال</span>
+                <span class="discount">خصم 37%</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="course-card" onclick="openModal('googleDataCourse')">
+            <div class="course-image">
+              <img src="https://i.postimg.cc/26WRQY1C/Untitled-design.png" alt="Google Data Analytics" />
+            </div>
+            <div class="course-content">
+              <h3>تحليلات بيانات Google</h3>
+              <p>شهادة معتمدة من Google لتحليل البيانات</p>
+              <div class="course-features">
+                <span>🏆 شهادة Google</span>
+                <span>🔍 أدوات احترافية</span>
+              </div>
+              <div class="course-pricing">
+                <span class="original-price">299 ريال</span>
+                <span class="current-price">189 ريال</span>
+                <span class="discount">خصم 37%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modals -->
     <div id="graphicCourse" class="modal">
       <div class="modal-content">
         <span class="close" onclick="closeModal('graphicCourse')">&times;</span>
@@ -399,9 +384,7 @@
           ✅ أسلوبي سهل، سريع، يخلّيك تستمتع وتتعلم بدون ملل<br />
           ✅ تقدر تصير فريلانسر، تشتغل لشخصك أو تفتح مشروعك بعد الدورة
         </p>
-        <a href="https://wa.me/966551422156" class="register-btn"
-          >سجل الآن</a
-        >
+        <a href="https://wa.me/966551422156" class="register-btn">سجل الآن</a>
       </div>
     </div>
 
@@ -433,7 +416,6 @@
           ⏱️ الدورة مسجلة وجاهزة لك متى ما فضيت.
         </p>
         <a href="https://wa.me/966551422156" class="register-btn">سجل الآن</a>
-
       </div>
     </div>
 
@@ -471,9 +453,7 @@
           8️⃣ بناء خطة أمن معلومات احترافية<br />
           9️⃣ مشروع عملي شامل + تقييم
         </p>
-        <a href="https://wa.me/966551422156" class="register-btn"
-          >سجل الآن</a
-        >
+        <a href="https://wa.me/966551422156" class="register-btn">سجل الآن</a>
       </div>
     </div>
 
@@ -500,9 +480,7 @@
         ✅ دعم ص<br />
         ✅ شهادة مجانية بعد الانتهاء<br />
         ✅ أدوات وتقنيات حديثة تساعدك تشتغل صح<br /><br />
-        <a href="https://wa.me/966551422156" class="register-btn"
-          >سجل الآن</a
-        >
+        <a href="https://wa.me/966551422156" class="register-btn">سجل الآن</a>
       </div>
     </div>
 
@@ -528,9 +506,7 @@
         ✅ تطبيق عملي مستمر عشان تثبت المعلومات<br />
         ✅ دعم ومتابعة في قروب خاص<br />
         ✅ شهادة مجانية بعد الانتهاء<br /><br />
-        <a href="https://wa.me/966551422156" class="register-btn"
-          >سجل الآن</a
-        >
+        <a href="https://wa.me/966551422156" class="register-btn">سجل الآن</a>
       </div>
     </div>
 
@@ -556,9 +532,7 @@
         ✅ تطبيق عملي على كل درس<br />
         ✅ متابعة ودعم في قروب خاص<br />
         ✅ شهادة مجانية بعد الانتهاء<br /><br />
-        <a href="#https://wa.me/966551422156" class="register-btn"
-          >سجل الآن</a
-        >
+        <a href="#https://wa.me/966551422156" class="register-btn">سجل الآن</a>
       </div>
     </div>
 
@@ -585,9 +559,7 @@
         ✅ تطبيق عملي مستمر<br />
         ✅ دعم ومتابعة في قروب خاص<br />
         ✅ شهادة مجانية بعد الانتهاء<br /><br />
-        <a href="#https://wa.me/966551422156" class="register-btn"
-          >سجل الآن</a
-        >
+        <a href="#https://wa.me/966551422156" class="register-btn">سجل الآن</a>
       </div>
     </div>
 
@@ -612,9 +584,7 @@
           ✅ متابعة ودعم في قروب خاص<br />
           ✅ شهادة مجانية بعد الانتهاء<br /><br />
         </p>
-        <a href="#https://wa.me/966551422156" class="register-btn"
-          >سجل الآن</a
-        >
+        <a href="#https://wa.me/966551422156" class="register-btn">سجل الآن</a>
       </div>
     </div>
 
@@ -643,23 +613,69 @@
     </div>
   </div>
 
-  <!-- الأسئلة الشائعة -->
-  <section class="faq">
-    <h2>الأسئلة الشائعة</h2>
-    <div class="faq-item">
-      <button class="faq-question">هل أستطيع الدفع بفيزا؟</button>
-      <div class="faq-answer">نعم، يمكنك الدفع بفيزا، ماستر كارد، وبايبال.</div>
-    </div>
-    <div class="faq-item">
-      <button class="faq-question">هل يوجد دعم فني بعد الاشتراك؟</button>
-      <div class="faq-answer">نعم، نقدم لك دعم فني مجاني لمدة 6 أشهر بعد الاشتراك.</div>
-    </div>
-    <div class="faq-item">
-      <button class="faq-question">هل الدورات أونلاين أم حضورية؟</button>
-      <div class="faq-answer">كل الدورات أونلاين ويمكنك مشاهدتها في أي وقت.</div>
-    </div>
-  </section>
+    <!-- FAQ Section -->
+    <section class="faq-section" id="faq">
+      <div class="container">
+        <h2>الأسئلة الشائعة</h2>
+        <p class="section-subtitle">إجابات للأسئلة الأكثر شيوعاً</p>
 
-  <script src="script.js"></script>
-</body>
+        <div class="faq-container">
+          <div class="faq-item">
+            <button class="faq-question">هل أستطيع الدفع بفيزا؟</button>
+            <div class="faq-answer">نعم، يمكنك الدفع بفيزا، ماستر كارد، وبايبال.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">هل يوجد دعم فني بعد الاشتراك؟</button>
+            <div class="faq-answer">نعم، نقدم لك دعم فني مجاني لمدة 6 أشهر بعد الاشتراك.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">هل الدورات أونلاين أم حضورية؟</button>
+            <div class="faq-answer">كل الدورات أونلاين ويمكنك مشاهدتها في أي وقت.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+      <div class="container">
+        <h2>تواصل معنا</h2>
+        <p>لديك استفسار؟ نحن هنا لمساعدتك</p>
+        <a href="https://wa.me/966551422156" class="contact-btn">تواصل عبر واتساب</a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>آدا</h3>
+            <p>منصة التعلم الرقمي الرائدة في العالم العربي</p>
+          </div>
+          <div class="footer-section">
+            <h4>روابط مهمة</h4>
+            <ul>
+              <li><a href="#courses">الدورات</a></li>
+              <li><a href="#faq">الأسئلة الشائعة</a></li>
+              <li><a href="#contact">تواصل معنا</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>تابعنا</h4>
+            <div class="social-links">
+              <a href="#">فيسبوك</a>
+              <a href="#">تويتر</a>
+              <a href="#">إنستغرام</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2024 آدا. جميع الحقوق محفوظة.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
 </html>
