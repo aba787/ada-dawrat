@@ -13,8 +13,8 @@ html {
 
 body {
   font-family: "Tajawal", "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
-  background: #2A2A2A;
-  color: #ffffff;
+  background: #f8f9fa;
+  color: #2c3e50;
   line-height: 1.7;
   direction: rtl;
   font-weight: 400;
@@ -31,14 +31,14 @@ body {
 
 /* Navigation */
 .navbar {
-  background: rgba(42, 42, 42, 0.95);
+  background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(10px);
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1000;
   padding: 1rem 0;
-  box-shadow: 0 2px 20px rgba(42, 42, 42, 0.3);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
 }
 
 .nav-container {
@@ -64,7 +64,7 @@ body {
 
 .nav-links a {
   text-decoration: none;
-  color: #ffffff;
+  color: #2c3e50;
   font-weight: 500;
   transition: color 0.3s ease;
 }
@@ -152,7 +152,7 @@ body {
 .features h2 {
   text-align: center;
   font-size: 2.5rem;
-  color: #2A2A2A;
+  color: #2c3e50;
   margin-bottom: 3rem;
   font-weight: 800;
   letter-spacing: -0.5px;
@@ -191,14 +191,14 @@ body {
 }
 
 .feature-card p {
-  color: #2A2A2A;
+  color: #2c3e50;
   line-height: 1.6;
 }
 
 /* Courses Section */
 .courses-section {
   padding: 80px 0;
-  background: #2A2A2A;
+  background: #ffffff;
 }
 
 .courses-section h2 {
@@ -282,7 +282,7 @@ body {
 }
 
 .course-content > p {
-  color: #2A2A2A;
+  color: #2c3e50;
   margin-bottom: 1rem;
   line-height: 1.5;
 }
@@ -338,7 +338,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(42, 42, 42, 0.9);
+  background: rgba(0, 0, 0, 0.8);
   justify-content: center;
   align-items: center;
   z-index: 2000;
@@ -365,7 +365,7 @@ body {
 }
 
 .modal-content p {
-  color: #2A2A2A;
+  color: #2c3e50;
   line-height: 1.6;
   margin-bottom: 2rem;
   text-align: right;
@@ -410,7 +410,7 @@ body {
 .faq-section h2 {
   text-align: center;
   font-size: 2.5rem;
-  color: #2A2A2A;
+  color: #2c3e50;
   margin-bottom: 1rem;
   font-weight: 800;
   letter-spacing: -0.5px;
@@ -434,7 +434,7 @@ body {
   width: 100%;
   text-align: right;
   background: white;
-  color: #2A2A2A;
+  color: #2c3e50;
   padding: 1.5rem 2rem;
   font-size: 1.1rem;
   font-weight: 600;
@@ -470,7 +470,7 @@ body {
   padding: 0 2rem;
   background: #ffffff;
   transition: all 0.4s ease;
-  color: #2A2A2A;
+  color: #2c3e50;
   line-height: 1.6;
 }
 
@@ -517,8 +517,8 @@ body {
 
 /* Footer */
 .footer {
-  background: #2A2A2A;
-  color: white;
+  background: #e9ecef;
+  color: #2c3e50;
   padding: 50px 0 20px;
 }
 
@@ -532,11 +532,11 @@ body {
 .footer-section h3,
 .footer-section h4 {
   margin-bottom: 1rem;
-  color: #ffffff;
+  color: #2c3e50;
 }
 
 .footer-section p {
-  color: #9B9B9B;
+  color: #6c757d;
   line-height: 1.6;
 }
 
@@ -549,7 +549,7 @@ body {
 }
 
 .footer-section a {
-  color: #9B9B9B;
+  color: #6c757d;
   text-decoration: none;
   transition: color 0.3s ease;
 }
@@ -564,10 +564,10 @@ body {
 }
 
 .footer-bottom {
-  border-top: 1px solid #9B9B9B;
+  border-top: 1px solid #dee2e6;
   padding-top: 2rem;
   text-align: center;
-  color: #9B9B9B;
+  color: #6c757d;
 }
 
 /* Responsive Design */
