@@ -12,11 +12,15 @@ html {
 }
 
 body {
-  font-family: "Tajawal", sans-serif;
+  font-family: "Tajawal", "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
   background: #2A2A2A;
   color: #ffffff;
-  line-height: 1.6;
+  line-height: 1.7;
   direction: rtl;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 .container {
@@ -50,6 +54,7 @@ body {
   color: #766E99;
   font-weight: 700;
   font-size: 1.8rem;
+  letter-spacing: -0.5px;
 }
 
 .nav-links {
@@ -88,21 +93,26 @@ body {
 
 .hero-section h1 {
   font-size: 4rem;
-  font-weight: 700;
+  font-weight: 800;
   margin-bottom: 1rem;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  letter-spacing: -1px;
+  line-height: 1.1;
 }
 
 .hero-section p {
   font-size: 1.3rem;
   margin-bottom: 1rem;
   opacity: 0.95;
+  font-weight: 500;
 }
 
 .hero-subtitle {
   font-size: 1.1rem !important;
-  opacity: 0.8 !important;
+  opacity: 0.85 !important;
   margin-bottom: 2rem !important;
+  font-weight: 400 !important;
+  line-height: 1.5 !important;
 }
 
 .cta-button {
@@ -144,7 +154,9 @@ body {
   font-size: 2.5rem;
   color: #2A2A2A;
   margin-bottom: 3rem;
-  font-weight: 700;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  line-height: 1.2;
 }
 
 .features-grid {
@@ -194,7 +206,9 @@ body {
   font-size: 2.5rem;
   color: #766E99;
   margin-bottom: 1rem;
-  font-weight: 700;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  line-height: 1.2;
 }
 
 .section-subtitle {
@@ -202,6 +216,8 @@ body {
   color: #9B9B9B;
   font-size: 1.1rem;
   margin-bottom: 3rem;
+  font-weight: 400;
+  line-height: 1.4;
 }
 
 .courses-grid {
@@ -396,7 +412,9 @@ body {
   font-size: 2.5rem;
   color: #2A2A2A;
   margin-bottom: 1rem;
-  font-weight: 700;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  line-height: 1.2;
 }
 
 .faq-container {
@@ -553,68 +571,324 @@ body {
 }
 
 /* Responsive Design */
+
+/* Large tablets and small desktops */
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 15px;
+  }
+  
+  .hero-section h1 {
+    font-size: 3.5rem;
+  }
+  
+  .courses-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+}
+
+/* Tablets */
 @media (max-width: 768px) {
+  .nav-container {
+    padding: 0 15px;
+  }
+  
   .nav-links {
     display: none;
   }
 
+  .hero-section {
+    padding: 100px 0 70px;
+  }
+
   .hero-section h1 {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
   }
 
   .hero-section p {
     font-size: 1.1rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem !important;
+  }
+
+  .cta-button {
+    padding: 12px 25px;
+    font-size: 1rem;
+  }
+
+  .features,
+  .courses-section,
+  .faq-section {
+    padding: 60px 0;
   }
 
   .features h2,
   .courses-section h2,
   .faq-section h2 {
-    font-size: 2rem;
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+  }
+
+  .features-grid {
+    gap: 1.5rem;
+  }
+
+  .feature-card {
+    padding: 1.5rem;
   }
 
   .courses-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .course-content {
+    padding: 1.2rem;
   }
 
   .modal-content {
-    margin: 20px;
+    margin: 15px;
     padding: 1.5rem;
+    max-width: 90%;
+  }
+
+  .faq-question {
+    padding: 1.2rem 1.5rem;
+    font-size: 1.05rem;
+  }
+
+  .faq-answer.show {
+    padding: 1.2rem 1.5rem;
   }
 
   .footer-content {
     grid-template-columns: 1fr;
     text-align: center;
+    gap: 1.5rem;
   }
 
   .social-links {
     justify-content: center;
   }
+
+  .contact-section {
+    padding: 50px 0;
+  }
 }
 
+/* Mobile phones */
 @media (max-width: 480px) {
-  .hero-section {
-    padding: 100px 0 60px;
+  html {
+    font-size: 14px;
   }
 
+  .container {
+    padding: 0 10px;
+  }
+
+  .nav-container {
+    padding: 0 10px;
+  }
+
+  .nav-logo h2 {
+    font-size: 1.5rem;
+  }
+
+  .hero-section {
+    padding: 90px 0 50px;
+  }
+
+  .hero-section h1 {
+    font-size: 2.2rem;
+    line-height: 1.1;
+  }
+
+  .hero-section p {
+    font-size: 1rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.9rem !important;
+  }
+
+  .cta-button {
+    padding: 10px 20px;
+    font-size: 0.95rem;
+  }
+
+  .features,
+  .courses-section,
+  .faq-section {
+    padding: 40px 0;
+  }
+
+  .features h2,
+  .courses-section h2,
+  .faq-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .section-subtitle {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .feature-card {
+    padding: 1.2rem;
+  }
+
+  .feature-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .feature-icon {
+    font-size: 2.5rem;
+  }
+
+  .courses-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .course-card {
+    margin: 0;
+  }
+
+  .course-image {
+    height: 180px;
+  }
+
+  .course-content {
+    padding: 1rem;
+  }
+
+  .course-content h3 {
+    font-size: 1.1rem;
+  }
+
+  .course-features {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .course-features span {
+    font-size: 0.8rem;
+  }
+
+  .course-pricing {
+    flex-wrap: wrap;
+  }
+
+  .modal-content {
+    margin: 10px;
+    padding: 1rem;
+    max-height: 90vh;
+  }
+
+  .modal-content h2 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+
+  .modal-content p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  .register-btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+
+  .faq-question {
+    padding: 1rem;
+    font-size: 0.95rem;
+  }
+
+  .faq-question::after {
+    left: 1rem;
+  }
+
+  .faq-answer {
+    padding: 0 1rem;
+  }
+
+  .faq-answer.show {
+    padding: 1rem;
+  }
+
+  .contact-section {
+    padding: 40px 0;
+  }
+
+  .contact-section h2 {
+    font-size: 1.8rem;
+  }
+
+  .contact-section p {
+    font-size: 1rem;
+  }
+
+  .contact-btn {
+    padding: 12px 25px;
+    font-size: 0.95rem;
+  }
+
+  .footer {
+    padding: 30px 0 15px;
+  }
+
+  .footer-section h3,
+  .footer-section h4 {
+    font-size: 1.1rem;
+  }
+
+  .back-to-top {
+    width: 45px;
+    height: 45px;
+    bottom: 15px;
+    left: 15px;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 360px) {
   .hero-section h1 {
     font-size: 2rem;
   }
 
-  .course-card {
-    margin: 0 10px;
+  .features h2,
+  .courses-section h2,
+  .faq-section h2 {
+    font-size: 1.6rem;
   }
 
-  .faq-question {
-    padding: 1rem 1.5rem;
-    font-size: 1rem;
+  .modal-content {
+    margin: 5px;
+    padding: 0.8rem;
   }
 
-  .faq-answer {
-    padding: 0 1.5rem;
+  .course-image {
+    height: 160px;
   }
+}
 
-  .faq-answer.show {
-    padding: 1rem 1.5rem;
+/* High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  body {
+    -webkit-font-smoothing: subpixel-antialiased;
   }
 }
 
