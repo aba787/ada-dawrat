@@ -12,7 +12,7 @@ html {
 
 body {
   font-family: "Tajawal", "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
-  background: #f8f9fa;
+  background: #FFFFFF;
   color: #2c3e50;
   line-height: 1.7;
   direction: rtl;
@@ -30,7 +30,7 @@ body {
 
 /* Navigation */
 .navbar {
-  background: rgba(120, 81, 169, 0.95);
+  background: rgba(118, 110, 153, 0.95);
   backdrop-filter: blur(10px);
   position: fixed;
   top: 0;
@@ -153,7 +153,7 @@ body {
 /* Features Section */
 .features {
   padding: 80px 0;
-  background: #9B9B9B;
+  background: #FFFFFF;
 }
 
 .features h2 {
@@ -179,7 +179,7 @@ body {
   text-align: center;
   box-shadow: 0 4px 20px rgba(42, 42, 42, 0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border: 3px solid #2c3e50;
+  border: 3px solid #9B9B9B;
   will-change: transform;
 }
 
@@ -236,13 +236,13 @@ body {
 }
 
 .course-card {
-  background: #766E99;
+  background: #FFFFFF;
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 4px 25px rgba(42, 42, 42, 0.1);
   transition: all 0.3s ease;
   cursor: pointer;
-  border: 1px solid #f1f5f9;
+  border: 1px solid #9B9B9B;
   will-change: transform;
 }
 
@@ -285,14 +285,14 @@ body {
 }
 
 .course-content h3 {
-  color: white;
+  color: #2c3e50;
   font-size: 1.3rem;
   margin-bottom: 0.5rem;
   font-weight: 600;
 }
 
 .course-content > p {
-  color: white;
+  color: #2c3e50;
   margin-bottom: 1rem;
   line-height: 1.5;
 }
@@ -305,7 +305,7 @@ body {
 }
 
 .course-features span {
-  background: rgba(255, 255, 255, 0.2);
+  background: #766E99;
   color: white;
   padding: 4px 8px;
   border-radius: 8px;
@@ -414,7 +414,7 @@ body {
 /* FAQ Section */
 .faq-section {
   padding: 80px 0;
-  background: #9B9B9B;
+  background: #FFFFFF;
 }
 
 .faq-section h2 {
@@ -434,7 +434,7 @@ body {
 
 .faq-item {
   margin-bottom: 1rem;
-  background: #4B0082;
+  background: #766E99;
   border-radius: 15px;
   overflow: hidden;
   box-shadow: 0 2px 10px rgba(42, 42, 42, 0.05);
@@ -443,7 +443,7 @@ body {
 .faq-question {
   width: 100%;
   text-align: right;
-  background: #4B0082;
+  background: #766E99;
   color: white;
   padding: 1.5rem 2rem;
   font-size: 1.1rem;
@@ -461,11 +461,11 @@ body {
   top: 50%;
   transform: translateY(-50%);
   transition: transform 0.3s ease;
-  color: #663399;
+  color: #9B9B9B;
 }
 
 .faq-question.active {
-  background: #663399;
+  background: #9B9B9B;
   color: white;
 }
 
@@ -478,7 +478,7 @@ body {
   max-height: 0;
   overflow: hidden;
   padding: 0 2rem;
-  background: #4B0082;
+  background: #766E99;
   transition: all 0.4s ease;
   color: white;
   line-height: 1.6;
@@ -528,9 +528,10 @@ body {
 
 /* Footer */
 .footer {
-  background: #e9ecef;
+  background: #FFFFFF;
   color: #2c3e50;
   padding: 50px 0 20px;
+  border-top: 2px solid #9B9B9B;
 }
 
 .footer-content {
@@ -575,7 +576,7 @@ body {
 }
 
 .footer-bottom {
-  border-top: 1px solid #dee2e6;
+  border-top: 1px solid #9B9B9B;
   padding-top: 2rem;
   text-align: center;
   color: #6c757d;
