@@ -162,7 +162,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   /** إضافة مؤشر التحميل للروابط الخارجية **/
-  document.querySelectorAll('a[href^="https://wa.me"]').forEach(link => {
+  document.querySelectorAll('a[href^="https://t.me"]').forEach(link => {
     link.addEventListener('click', function(e) {
       const originalText = this.textContent;
       this.textContent = 'جاري التحويل...';
