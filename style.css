@@ -425,7 +425,7 @@ body {
 
 .faq-item {
   margin-bottom: 1rem;
-  background: #766E99;
+  background: #4B0082;
   border-radius: 15px;
   overflow: hidden;
   box-shadow: 0 2px 10px rgba(42, 42, 42, 0.05);
@@ -434,7 +434,7 @@ body {
 .faq-question {
   width: 100%;
   text-align: right;
-  background: #766E99;
+  background: #4B0082;
   color: white;
   padding: 1.5rem 2rem;
   font-size: 1.1rem;
@@ -452,11 +452,11 @@ body {
   top: 50%;
   transform: translateY(-50%);
   transition: transform 0.3s ease;
-  color: #766E99;
+  color: #663399;
 }
 
 .faq-question.active {
-  background: #766E99;
+  background: #663399;
   color: white;
 }
 
@@ -469,7 +469,7 @@ body {
   max-height: 0;
   overflow: hidden;
   padding: 0 2rem;
-  background: #766E99;
+  background: #4B0082;
   transition: all 0.4s ease;
   color: white;
   line-height: 1.6;
