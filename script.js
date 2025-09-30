@@ -51,29 +51,43 @@ document.addEventListener("DOMContentLoaded", () => {
 
   /** تحسين النافذة المنبثقة (Modal) **/
   window.openModal = (id) => {
-    const modal = document.getElementById(id);
-    if (modal) {
-      modal.style.display = "flex";
-      document.body.style.overflow = "hidden";
-      
-      // إضافة تأثير الظهور
-      setTimeout(() => {
-        modal.querySelector('.modal-content').style.transform = 'scale(1)';
-        modal.querySelector('.modal-content').style.opacity = '1';
-      }, 10);
+    try {
+      const modal = document.getElementById(id);
+      if (modal) {
+        modal.style.display = "flex";
+        document.body.style.overflow = "hidden";
+        
+        // إضافة تأثير الظهور
+        setTimeout(() => {
+          const content = modal.querySelector('.modal-content');
+          if (content) {
+            content.style.transform = 'scale(1)';
+            content.style.opacity = '1';
+          }
+        }, 10);
+      }
+    } catch (error) {
+      console.error('خطأ في فتح النافذة المنبثقة:', error);
     }
   };
 
   window.closeModal = (id) => {
-    const modal = document.getElementById(id);
-    if (modal) {
-      modal.querySelector('.modal-content').style.transform = 'scale(0.8)';
-      modal.querySelector('.modal-content').style.opacity = '0';
-      
-      setTimeout(() => {
-        modal.style.display = "none";
-        document.body.style.overflow = "auto";
-      }, 300);
+    try {
+      const modal = document.getElementById(id);
+      if (modal) {
+        const content = modal.querySelector('.modal-content');
+        if (content) {
+          content.style.transform = 'scale(0.8)';
+          content.style.opacity = '0';
+        }
+        
+        setTimeout(() => {
+          modal.style.display = "none";
+          document.body.style.overflow = "auto";
+        }, 300);
+      }
+    } catch (error) {
+      console.error('خطأ في إغلاق النافذة المنبثقة:', error);
     }
   };
 

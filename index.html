@@ -3,23 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="منصة آدا للتعلم الرقمي - دورات تدريبية احترافية في التصميم والبرمجة والأمن السيبراني مع شهادات معتمدة">
+    <meta name="keywords" content="دورات تدريبية, تعلم رقمي, شهادات معتمدة, تصميم جرافيك, برمجة, أمن سيبراني">
+    <meta name="author" content="آدا">
+    <meta property="og:title" content="آدا - منصة التعلم الرقمي">
+    <meta property="og:description" content="اكتشف دورات تدريبية عالية الجودة مع شهادات معتمدة">
+    <meta property="og:type" content="website">
     <title>آدا - منصة التعلم الرقمي</title>
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="navbar" role="navigation" aria-label="القائمة الرئيسية">
         <div class="nav-container">
             <div class="nav-logo">
                 <h2>آدا</h2>
             </div>
-            <div class="nav-links">
-                <a href="#home">الرئيسية</a>
-                <a href="#courses">الدورات</a>
-                <a href="#about">من نحن</a>
-                <a href="#contact">تواصل معنا</a>
-            </div>
+            <ul class="nav-links" role="menubar">
+                <li role="none"><a href="#home" role="menuitem">الرئيسية</a></li>
+                <li role="none"><a href="#courses" role="menuitem">الدورات</a></li>
+                <li role="none"><a href="#about" role="menuitem">من نحن</a></li>
+                <li role="none"><a href="#contact" role="menuitem">تواصل معنا</a></li>
+            </ul>
         </div>
     </nav>
 
@@ -73,7 +79,7 @@
                 <!-- Graphic Design Course -->
                 <div class="course-card" onclick="openModal('modal1')">
                     <div class="course-image">
-                        <img src="https://images.unsplash.com/photo-1561736778-92e52a7769ef?w=400&h=200&fit=crop&crop=center" alt="تصميم الجرافيك">
+                        <img src="https://images.unsplash.com/photo-1561736778-92e52a7769ef?w=400&h=200&fit=crop&crop=center" alt="تصميم الجرافيك" loading="lazy">
                         <div class="course-badge">خصم 37%</div>
                     </div>
                     <div class="course-content">
@@ -94,7 +100,7 @@
                 <!-- English for Programmers Course -->
                 <div class="course-card" onclick="openModal('modal2')">
                     <div class="course-image">
-                        <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=400&h=200&fit=crop&crop=center" alt="الإنجليزية للمبرمجين">
+                        <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=400&h=200&fit=crop&crop=center" alt="الإنجليزية للمبرمجين" loading="lazy">
                         <div class="course-badge">خصم 37%</div>
                     </div>
                     <div class="course-content">
@@ -115,7 +121,7 @@
                 <!-- Cybersecurity Course -->
                 <div class="course-card" onclick="openModal('modal3')">
                     <div class="course-image">
-                        <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=400&h=200&fit=crop&crop=center" alt="الأمن السيبراني">
+                        <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=400&h=200&fit=crop&crop=center" alt="الأمن السيبراني" loading="lazy">
                         <div class="course-badge">خصم 37%</div>
                     </div>
                     <div class="course-content">
@@ -136,7 +142,7 @@
                 <!-- Networking Course -->
                 <div class="course-card" onclick="openModal('modal4')">
                     <div class="course-image">
-                        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&h=200&fit=crop&crop=center" alt="الشبكات">
+                        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&h=200&fit=crop&crop=center" alt="الشبكات" loading="lazy">
                         <div class="course-badge">خصم 37%</div>
                     </div>
                     <div class="course-content">
@@ -157,7 +163,7 @@
                 <!-- JavaScript Course -->
                 <div class="course-card" onclick="openModal('modal5')">
                     <div class="course-image">
-                        <img src="https://images.unsplash.com/photo-1627398242454-45a1465c2479?w=400&h=200&fit=crop&crop=center" alt="جافاسكريبت">
+                        <img src="https://images.unsplash.com/photo-1627398242454-45a1465c2479?w=400&h=200&fit=crop&crop=center" alt="جافاسكريبت" loading="lazy">
                         <div class="course-badge">خصم 37%</div>
                     </div>
                     <div class="course-content">
@@ -178,7 +184,7 @@
                 <!-- Canva Design Course -->
                 <div class="course-card" onclick="openModal('modal6')">
                     <div class="course-image">
-                        <img src="https://images.unsplash.com/photo-1609921212029-bb5a28e60960?w=400&h=200&fit=crop&crop=center" alt="التصميم باستخدام كانفا">
+                        <img src="https://images.unsplash.com/photo-1609921212029-bb5a28e60960?w=400&h=200&fit=crop&crop=center" alt="التصميم باستخدام كانفا" loading="lazy">
                         <div class="course-badge">خصم 37%</div>
                     </div>
                     <div class="course-content">
@@ -199,7 +205,7 @@
                 <!-- Data Analysis Course -->
                 <div class="course-card" onclick="openModal('modal7')">
                     <div class="course-image">
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=200&fit=crop&crop=center" alt="تحليل البيانات">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=200&fit=crop&crop=center" alt="تحليل البيانات" loading="lazy">
                         <div class="course-badge">خصم 37%</div>
                     </div>
                     <div class="course-content">
@@ -220,7 +226,7 @@
                 <!-- Facebook Pixel Course -->
                 <div class="course-card" onclick="openModal('modal8')">
                     <div class="course-image">
-                        <img src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=400&h=200&fit=crop&crop=center" alt="بكسل فيسبوك">
+                        <img src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=400&h=200&fit=crop&crop=center" alt="بكسل فيسبوك" loading="lazy">
                         <div class="course-badge">خصم 37%</div>
                     </div>
                     <div class="course-content">
@@ -241,7 +247,7 @@
                 <!-- Google Data Analytics Course -->
                 <div class="course-card" onclick="openModal('modal9')">
                     <div class="course-image">
-                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=200&fit=crop&crop=center" alt="جوجل أناليتكس">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=200&fit=crop&crop=center" alt="جوجل أناليتكس" loading="lazy">
                         <div class="course-badge">خصم 37%</div>
                     </div>
                     <div class="course-content">

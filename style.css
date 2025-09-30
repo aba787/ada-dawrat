@@ -59,6 +59,13 @@ body {
 .nav-links {
   display: flex;
   gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin: 0;
 }
 
 .nav-links a {
@@ -173,6 +180,7 @@ body {
   box-shadow: 0 4px 20px rgba(42, 42, 42, 0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   border: 3px solid #2c3e50;
+  will-change: transform;
 }
 
 .feature-card:hover {
@@ -235,6 +243,7 @@ body {
   transition: all 0.3s ease;
   cursor: pointer;
   border: 1px solid #f1f5f9;
+  will-change: transform;
 }
 
 .course-card:hover {
